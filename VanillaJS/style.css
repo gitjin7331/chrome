@@ -1,0 +1,183 @@
+/* 태그 */ 
+body{
+  overflow: hidden;
+}
+
+h1{
+  color: white;
+  transition: color .5s ease-in-out;
+}
+
+/* font append */
+@font-face {
+  font-family: "My font";
+  src: url("./font/DancingScript.ttf");
+}
+@font-face {
+  font-family: "My font2";
+  src: url("./font/Blacksword.otf");
+}
+@font-face {
+  font-family: "My font3";
+  src: url("./font/Amarillo.otf");
+}
+@font-face {
+  font-family: "My font4";
+  src: url("./font/Broadcast_Matter.ttf");
+}
+@font-face {
+  font-family: "My font5";
+  src: url("./font/NanumBarunpenB.otf");
+}
+@font-face {
+  font-family: "My font6";
+  src: url("./font/NanumGothic.ttf");
+}
+@font-face {
+  font-family: "My font7";
+  src: url("./font/NanumPen.otf");
+}
+@font-face {
+  font-family: "My font8";
+  src: url("./font/KCC-eunyoung.ttf");
+}
+@font-face {
+  font-family: "My font9";
+  src: url("./font/KCC-Kimhoon.ttf");
+}
+@font-face {
+  font-family: "My font10";
+  src: url("./font/MongDol.ttf");
+}
+@font-face {
+  font-family: "My font11";
+  src: url("./font/SDMiSaeng.ttf");
+}
+@font-face {
+  font-family: "My font12";
+  src: url("./font/TaeFont.ttf");
+}
+@font-face {
+  font-family: "My font13";
+  src: url("./font/YeonJi.ttf");
+}
+
+/* 디자인 */ 
+.layer{
+  position:absolute;
+  display:table;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.layer .layer_inner{
+  display:table-cell;
+  text-align:center;
+  vertical-align: middle;
+}
+
+.js-clock{
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 0;
+  font-size: 3vw;
+  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+}
+
+.js-form .name, .js-toDoForm .todo{
+  position: absolute;
+  left: 38.5%;
+  background-color: transparent;
+  border: none;
+  font-size: 2vw;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow',Arial, sans-serif;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.js-form .name{
+  top: 41.5%;
+}
+.js-toDoForm .todo{
+  top: 50%;
+}
+
+input::placeholder, .js-toDoList, .js-greetings {
+  color: white;
+  font-family: "My font5";
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.js-greetings{
+  margin-bottom: 7%;
+  font-family: "My font", "My font10";
+}
+
+.js-toDoList{
+  position: absolute;
+  top: 55%;
+  left: 37%;
+  font-family: "My font5";
+  text-align:left;
+  margin-right: 20px;
+  font-size: 1.7vw;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  width: 280px;
+  height: 130px;
+  overflow: auto;
+}
+
+.js-toDoList::-webkit-scrollbar{
+  width: 10px;
+}
+
+.js-toDoList::-webkit-scrollbar-thumb{
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px rgb(177, 177, 177);
+}
+
+.js-toDoList::-webkit-scrollbar-track{
+  background-color: rgb(226, 226, 226);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
+
+.js-weather{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: white;
+  font-family: "My font2", serif;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+/* 이벤트 처리 */ 
+.form, .grettings{
+  display: none;
+}
+.showing{
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index: -1;
+  animation: fadeIn .1000s linear;
+}
+
