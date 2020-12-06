@@ -5,7 +5,7 @@ const IMG_NUMBER = 4;
 
 function paintImage(imgNumber){
   const image = new Image(); 
-  image.src = `images/background${
+  image.src = `./images/background${
     (imgNumber+1) < 10 ? `0${imgNumber+1}` : imgNumber+1}.jpg`;
   image.classList.add("bgImage");
   body.prepend(image);
